@@ -13,15 +13,15 @@
   "autoload": {
     "psr-4": {
       "NSPaloHtmlHelper\\": "src/"
-    },
-    "autoload-dev": {
-      "psr-4": {
-        "Tests\\": "tests/"
-      }
-    },
-    "scripts": {
-      "validate-composer": "@composer validate --strict",
-      "phpunit": "vendor/bin/phpunit --configuration phpunit.xml --coverage-text"
     }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "validate-composer": "@composer validate --strict",
+    "phpunit": "vendor/bin/phpunit --configuration phpunit.xml --coverage-text"
   }
 }
