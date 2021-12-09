@@ -1,0 +1,27 @@
+{
+  "name": "php/nspalo-html-helper",
+  "description": "Simple HTML Helper for Julz Francisco",
+  "license": "MIT",
+  "require": {
+    "php": "^7.4 | ^8.0"
+  },
+  "type": "project",
+  "require-dev": {
+    "phpunit/phpunit": "^9.5",
+    "roave/security-advisories": "dev-latest"
+  },
+  "autoload": {
+    "psr-4": {
+      "NSPaloHtmlHelper\\": "src/"
+    },
+    "autoload-dev": {
+      "psr-4": {
+        "Tests\\": "tests/"
+      }
+    },
+    "scripts": {
+      "validate-composer": "@composer validate --strict",
+      "phpunit": "vendor/bin/phpunit --configuration phpunit.xml --coverage-text"
+    }
+  }
+}
