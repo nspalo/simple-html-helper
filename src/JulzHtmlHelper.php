@@ -46,21 +46,21 @@ final class JulzHtmlHelper
         /**
          * Early return if it's the only element
          */
-        if (count($parseContent) === 1) {
+        if (\count($parseContent) === 1) {
             return $parseContent[$searchFoundAtIndex];
         }
 
         /**
          * Extract the word and the adjacent element; one element before and after
          */
-        $rawContent = array_splice( $parseContent, $searchFoundAtIndex - 1, 3);
+        $rawContent = \array_splice( $parseContent, $searchFoundAtIndex - 1, 3);
 
         /**
          * If the adjacent element is not the first element,
          * then prepend & append the first and last element
          */
         if ($searchFoundAtIndex - 1 !== 0) {
-            array_unshift($rawContent , $parseContent[\array_key_first($parseContent)]);
+            \array_unshift($rawContent , $parseContent[\array_key_first($parseContent)]);
             $rawContent[] = $parseContent[\array_key_last($parseContent)];
         }
 
